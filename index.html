@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echipe de Fotbal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .green-button {
+            background-color: green;
+            color: white; /* Opțional: pentru a face textul alb */
+            border: none; /* Opțional: pentru a elimina bordura implicită */
+            padding: 10px 20px; /* Opțional: pentru a adăuga puțină umplutură */
+            cursor: pointer; /* Opțional: pentru a schimba cursorul la pointer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏆 Echipe de Fotbal</h1>
+        <input type="text" id="searchBar" placeholder="Caută echipa dorită..." oninput="filterTeams()">
+    </header>
+
+    <section id="teams">
+        <div class="team-card" data-name="real madrid">
+            <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/5/56/Real_Madrid_CF.svg/300px-Real_Madrid_CF.svg.png" alt="Real Madrid">
+            <h2>Real Madrid</h2>
+            <p>Unul dintre cele mai renumite cluburi din lume.</p>
+            <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
+            <div class="details" style="display: none;">
+                <p><strong>Anul înființării:</strong> 1902</p>
+                <p><strong>Stadion:</strong> Santiago Bernabéu</p>
+                <p><strong>Trofee:</strong> 35 titluri La Liga, 14 Ligi ale Campionilor</p>
+            </div>
+        </div>
+        <div class="team-card" data-name="fc barcelona">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="FC Barcelona">
+            <h2>FC Barcelona</h2>
+            <p>Cunoscută pentru stilul tiki-taka.</p>
+            <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
+            <div class="details" style="display: none;">
+                <p><strong>Anul înființării:</strong> 1899</p>
+                <p><strong>Stadion:</strong> Camp Nou</p>
+                <p><strong>Trofee:</strong> 27 titluri La Liga, 5 Ligi ale Campionilor</p>
+            </div>
+        </div>
+        <div class="team-card" data-name="manchester united">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/300px-Manchester_United_FC_crest.svg.png" alt="Manchester United">
+            <h2>Manchester United</h2>
+            <p>Un club emblematic din Anglia.</p>
+            <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
+            <div class="details" style="display: none;">
+                <p><strong>Anul înființării:</strong> 1878</p>
+                <p><strong>Stadion:</strong> Old Trafford</p>
+                <p><strong>Trofee:</strong> 20 titluri Premier League, 3 Ligi ale Campionilor</p>
+            </div>
+        </div>
+        <div class="team-card" data-name="liverpool fc">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/270px-Liverpool_FC.svg.png" alt="Liverpool FC">
+            <h2>Liverpool FC</h2>
+            <p>Un club cu o istorie bogată și mulți fani.</p>
+            <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
+            <div class="details" style="display: none;">
+                <p><strong>Anul înființării:</strong> 1892</p>
+                <p><strong>Stadion:</strong> Anfield</p>
+                <p><strong>Trofee:</strong> 19 titluri Premier League, 6 Ligi ale Campionilor</p>
+            </div>
+        </div>
+        <div class="team-card" data-name="ac milan">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/198px-Logo_of_AC_Milan.svg.png" alt="AC Milan">
+            <h2>AC Milan</h2>
+            <p>Unul dintre cele mai de succes cluburi din Italia.</p>
+            <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
+            <div class="details" style="display: none;">
+                <p><strong>Anul înființării:</strong> 1899</p>
+                <p><strong>Stadion:</strong> San Siro</p>
+                <p><strong>Trofee:</strong> 19 titluri Serie A, 7 Ligi ale Campionilor</p>
+            </div>
+        </div>
+        <div class="team-card" data-name="juventus fc">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juventus_FC_-_pictogram_black_%28Italy%2C_2017%29.svg/180px-Juventus_FC_-_pictogram_black_%28Italy%2C_2017%29.svg.png" alt="Juventus FC">
+            <h2>Juventus FC</h2>
+            <p>Club cunoscut pentru dominația în Serie A.</p>
+            <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
+            <div class="details" style="display: none;">
+                <p><strong>Anul înființării:</strong> 1897</p>
+                <p><strong>Stadion:</strong> Allianz Stadium</p>
+                <p><strong>Trofee:</strong> 36 titluri Serie A, 2 Ligi ale Campionilor</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function filterTeams() {
+            const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+            const teams = document.querySelectorAll('.team-card');
+            teams.forEach(team => {
+                const name = team.getAttribute('data-name');
+                if (name.includes(searchTerm)) {
+                    team.style.display = 'block';
+                } else {
+                    team.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
