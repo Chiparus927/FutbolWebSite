@@ -6,15 +6,18 @@
     <title>Echipe de Fotbal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .green-button {
-            background-color: green;
-            color: white; /* Opțional: pentru a face textul alb */
-            border: none; /* Opțional: pentru a elimina bordura implicită */
-            padding: 10px 20px; /* Opțional: pentru a adăuga puțină umplutură */
-            cursor: pointer; /* Opțional: pentru a schimba cursorul la pointer */
-        }
+.green-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto; /* Centrează butonul */
+    border-radius: 5px;
+}
+
     </style>
 </head>
 <body>
@@ -28,67 +31,89 @@
             <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/5/56/Real_Madrid_CF.svg/300px-Real_Madrid_CF.svg.png" alt="Real Madrid">
             <h2>Real Madrid</h2>
             <p>Unul dintre cele mai renumite cluburi din lume.</p>
+            <p><strong>Jucător legendar:</strong> Cristiano Ronaldo</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
             <div class="details" style="display: none;">
                 <p><strong>Anul înființării:</strong> 1902</p>
                 <p><strong>Stadion:</strong> Santiago Bernabéu</p>
                 <p><strong>Trofee:</strong> 35 titluri La Liga, 14 Ligi ale Campionilor</p>
             </div>
+            <img src="https://imageio.forbes.com/specials-images/imageserve/66cd825c64c633d61a8bc719/Real-Madrid-legend-Cristiano-Ronaldo-is-getting-towards-the-end-of-his-career-/960x0.jpg?format=jpg&width=960" alt="Cristiano Ronaldo" class="player-img">
+        </div>
+    
         </div>
         <div class="team-card" data-name="fc barcelona">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="FC Barcelona">
             <h2>FC Barcelona</h2>
             <p>Cunoscută pentru stilul tiki-taka.</p>
+            <p><strong>Jucător legendar:</strong> Lionel Messi</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
             <div class="details" style="display: none;">
                 <p><strong>Anul înființării:</strong> 1899</p>
                 <p><strong>Stadion:</strong> Camp Nou</p>
                 <p><strong>Trofee:</strong> 27 titluri La Liga, 5 Ligi ale Campionilor</p>
             </div>
+            <img src="https://fcbarcelona-static-files.s3.amazonaws.com/test/fcbarcelona/photo/2018/05/14/e843b47e-1495-428a-bfb7-23d4165483d1/Argentine-soccer-hero-Lionel-Messi-is-the-world-s-best-footballer..jpg" alt="Lionel Messi" class="player-img">
+        </div>
+
         </div>
         <div class="team-card" data-name="manchester united">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/300px-Manchester_United_FC_crest.svg.png" alt="Manchester United">
             <h2>Manchester United</h2>
             <p>Un club emblematic din Anglia.</p>
+            <p><strong>Jucător legendar:</strong> Eric Cantona</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
             <div class="details" style="display: none;">
                 <p><strong>Anul înființării:</strong> 1878</p>
                 <p><strong>Stadion:</strong> Old Trafford</p>
                 <p><strong>Trofee:</strong> 20 titluri Premier League, 3 Ligi ale Campionilor</p>
             </div>
+            <img src="https://www.goal.com/story/eric-cantona-celebrates-manchester-united-anniversary/media/cantona_united_red.png" alt="Eric Cantona" class="player-img">
+        </div>
+
         </div>
         <div class="team-card" data-name="liverpool fc">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/270px-Liverpool_FC.svg.png" alt="Liverpool FC">
             <h2>Liverpool FC</h2>
             <p>Un club cu o istorie bogată și mulți fani.</p>
+            <p><strong>Jucător legendar:</strong> Steven Gerrard</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
             <div class="details" style="display: none;">
                 <p><strong>Anul înființării:</strong> 1892</p>
                 <p><strong>Stadion:</strong> Anfield</p>
                 <p><strong>Trofee:</strong> 19 titluri Premier League, 6 Ligi ale Campionilor</p>
             </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnvArHxMgshaiPeIGQudiILS98km9FiWC-EA&s" alt="Steven Gerrard" class="player-img">
+        </div>
+
         </div>
         <div class="team-card" data-name="ac milan">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/198px-Logo_of_AC_Milan.svg.png" alt="AC Milan">
             <h2>AC Milan</h2>
             <p>Unul dintre cele mai de succes cluburi din Italia.</p>
+            <p><strong>Jucător legendar:</strong> Paolo Maldini</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
             <div class="details" style="display: none;">
                 <p><strong>Anul înființării:</strong> 1899</p>
                 <p><strong>Stadion:</strong> San Siro</p>
                 <p><strong>Trofee:</strong> 19 titluri Serie A, 7 Ligi ale Campionilor</p>
             </div>
+            <img src="https://premium.vgc.no/v2/images/97ff22b0-3f01-4b74-96cc-e9ff8ebad8c1?fit=crop&format=auto&h=431&w=780&s=d058c8995275016efe7606a9b15cb7b976920ea8" alt="Paolom Maldini" class="player-img">
+        </div>
+
         </div>
         <div class="team-card" data-name="juventus fc">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juventus_FC_-_pictogram_black_%28Italy%2C_2017%29.svg/180px-Juventus_FC_-_pictogram_black_%28Italy%2C_2017%29.svg.png" alt="Juventus FC">
             <h2>Juventus FC</h2>
             <p>Club cunoscut pentru dominația în Serie A.</p>
+            <p><strong>Jucător legendar:</strong> Alessandro Del Piero</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
             <div class="details" style="display: none;">
                 <p><strong>Anul înființării:</strong> 1897</p>
                 <p><strong>Stadion:</strong> Allianz Stadium</p>
                 <p><strong>Trofee:</strong> 36 titluri Serie A, 2 Ligi ale Campionilor</p>
             </div>
+            <img src="https://s.hs-data.com/bilder/spieler/gross/1355.jpg" alt="Alessandro Del Piero" class="player-img">
         </div>
     </section>
 

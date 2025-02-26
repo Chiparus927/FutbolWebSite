@@ -1,13 +1,13 @@
 * {
-    margin: 10;
-    padding: 5;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
     background-color: #fafdfa;
-    color: #b2b7b8;
+    color: #333;
 }
 
 header {
@@ -54,9 +54,17 @@ header h1 {
 
 .team-card img {
     width: 50%;
-    height: 200px; 
+    height: 150px; 
     border-radius: 20px;
     object-fit: cover;
+}
+
+.player-img {
+    width: 80%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 10px;
 }
 
 .team-card:hover {
@@ -64,35 +72,9 @@ header h1 {
     box-shadow: 0 8px 16px rgba(1, 248, 75, 0.2);
 }
 
-.team-card h2 {
-    margin: 10px 0;
-    color: #4caf50;
-    font-weight: 600;
-}
-
-.team-card p {
-    color: #0b0f06;
-}
-
-.details {
-    display: none;
-    margin-top: 10px; 
-}
-
-.details p {
-    margin: 5px 0;
-}
 @media screen and (max-width: 600px){
     #teams {
         flex-direction: column;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
-        padding: 0 20px;
-        width: 1300px;
         align-items: center;
-        
     }
-    
 }
