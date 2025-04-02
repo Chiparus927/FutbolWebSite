@@ -17,38 +17,43 @@
     </header>
 
     <section id="teams">
+    
         <div class="team-card" data-name="real madrid">
             <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/5/56/Real_Madrid_CF.svg/300px-Real_Madrid_CF.svg.png" alt="Real Madrid">
+            <button class="favorite-button">⭐</button>
             <h2>Real Madrid</h2>
             <p>Unul dintre cele mai renumite cluburi din lume.</p>
-            <p><strong>Jucător legendar:</strong> Cristiano Ronaldo</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
-            <div class="details" style="display: none;">
+            <div class="details">
                 <p><strong>Anul înființării:</strong> 1902</p>
                 <p><strong>Stadion:</strong> Santiago Bernabéu</p>
                 <p><strong>Trofee:</strong> 35 titluri La Liga, 14 Ligi ale Campionilor</p>
             </div>
-            <img src="https://imageio.forbes.com/specials-images/imageserve/66cd825c64c633d61a8bc719/Real-Madrid-legend-Cristiano-Ronaldo-is-getting-towards-the-end-of-his-career-/960x0.jpg?format=jpg&width=960" alt="Cristiano Ronaldo" class="player-img">
+            <img src="https://e0.365dm.com/17/12/1600x900/skysports-cristiano-ronaldo-real-madrid-football_4178227.jpg?20171209155617" alt="Cristiano Ronaldo" class="player-img">
+
         </div>
-    
-        </div>
+        
+        <!-- Adaugă celelalte echipe aici, tot cu structură similară -->
         <div class="team-card" data-name="fc barcelona">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" alt="FC Barcelona">
+            <button class="favorite-button">⭐</button>
             <h2>FC Barcelona</h2>
             <p>Cunoscută pentru stilul tiki-taka.</p>
-            <p><strong>Jucător legendar:</strong> Lionel Messi</p>
             <button onclick="toggleDetails(this)" class="green-button">Află mai multe</button>
-            <div class="details" style="display: none;">
+            <div class="details">
                 <p><strong>Anul înființării:</strong> 1899</p>
                 <p><strong>Stadion:</strong> Camp Nou</p>
                 <p><strong>Trofee:</strong> 27 titluri La Liga, 5 Ligi ale Campionilor</p>
             </div>
-            <img src="https://fcbarcelona-static-files.s3.amazonaws.com/test/fcbarcelona/photo/2018/05/14/e843b47e-1495-428a-bfb7-23d4165483d1/Argentine-soccer-hero-Lionel-Messi-is-the-world-s-best-footballer..jpg" alt="Lionel Messi" class="player-img">
+            <img src="https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/6b/a4/4a2f3453e65b56f49f8baa327119d48658cef8eaf06c9378954993.jpg" alt="Leonel Messi" class="player-img">
+
         </div>
 
         </div>
         <div class="team-card" data-name="manchester united">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/300px-Manchester_United_FC_crest.svg.png" alt="Manchester United">
+            <button class="favorite-button">⭐</button>
+
             <h2>Manchester United</h2>
             <p>Un club emblematic din Anglia.</p>
             <p><strong>Jucător legendar:</strong> Eric Cantona</p>
@@ -64,6 +69,8 @@
         </div>
         <div class="team-card" data-name="liverpool fc">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/270px-Liverpool_FC.svg.png" alt="Liverpool FC">
+            <button class="favorite-button">⭐</button>
+
             <h2>Liverpool FC</h2>
             <p>Un club cu o istorie bogată și mulți fani.</p>
             <p><strong>Jucător legendar:</strong> Steven Gerrard</p>
@@ -79,6 +86,8 @@
         </div>
         <div class="team-card" data-name="ac milan">
             <img src="https://www.rundesign.it/wp-content/uploads/2022/03/logo_milan_1995.jpeg" alt="AC Milan">
+            <button class="favorite-button">⭐</button>
+
             <h2>AC Milan</h2>
             <p>Unul dintre cele mai de succes cluburi din Italia.</p>
             <p><strong>Jucător legendar:</strong> Paolo Maldini</p>
@@ -94,6 +103,8 @@
         </div>
         <div class="team-card" data-name="juventus fc">
             <img src="https://creativereview.imgix.net/content/uploads/2017/01/Juve-sq.jpg" alt="Juventus FC">
+            <button class="favorite-button">⭐</button>
+
             <h2>Juventus FC</h2>
             <p>Club cunoscut pentru dominația în Serie A.</p>
             <p><strong>Jucător legendar:</strong> Alessandro Del Piero</p>
@@ -106,6 +117,8 @@
             <img src="https://s.hs-data.com/bilder/spieler/gross/1355.jpg" alt="Alessandro Del Piero" class="player-img">         </div>
          <div class="team-card" data-name="chelsea fc">
              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/270px-Chelsea_FC.svg.png" alt="Chelsea FC">
+             <button class="favorite-button">⭐</button>
+
              <h2>Chelsea FC</h2>
              <p>Un club de top din Premier League.</p>
              <p><strong>Jucător legendar:</strong> Frank Lampard</p>
@@ -119,6 +132,8 @@
  
          <div class="team-card" data-name="paris saint-germain">
              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/270px-Paris_Saint-Germain_F.C..svg.png" alt="PSG">
+                         <button class="favorite-button">⭐</button>
+
              <h2>Paris Saint-Germain</h2>
              <p>Clubul de elită al Franței.</p>
              <p><strong>Jucător legendar:</strong> Zlatan Ibrahimović</p>
@@ -143,5 +158,24 @@
              </div>
     </section>
 
+    <script>
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function filterTeams() {
+            const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+            const teams = document.querySelectorAll('.team-card');
+            teams.forEach(team => {
+                const name = team.getAttribute('data-name');
+                if (name.includes(searchTerm)) {
+                    team.style.display = 'block';
+                } else {
+                    team.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
