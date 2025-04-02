@@ -81,3 +81,13 @@ header h1 {
     }
 }
 
+.green-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto; /* Centrează butonul */
+    border-radius: 5px;
+}

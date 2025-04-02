@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echipe de Fotbal</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-.green-button {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: block;
-    margin: 10px auto; /* Centrează butonul */
-    border-radius: 5px;
-}
-
     </style>
 </head>
 <body>
@@ -153,24 +143,5 @@
              </div>
     </section>
 
-    <script>
-        function toggleDetails(button) {
-            const details = button.nextElementSibling;
-            details.style.display = details.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function filterTeams() {
-            const searchTerm = document.getElementById('searchBar').value.toLowerCase();
-            const teams = document.querySelectorAll('.team-card');
-            teams.forEach(team => {
-                const name = team.getAttribute('data-name');
-                if (name.includes(searchTerm)) {
-                    team.style.display = 'block';
-                } else {
-                    team.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </body>
 </html>
